@@ -1,0 +1,26 @@
+<odoo>
+    <data>
+         <template id="assets_frontend" inherit_id="website.assets_frontend" name="Custom Module">
+             <xpath expr="." position="inside">
+                <base href="/" />
+             </xpath>
+         </template>
+
+
+
+         <template id="index" name="Custom template">
+            <t t-call="website.layout">
+                <app-root></app-root>
+                <script type="text/javascript" src="/test1-angular/static/src/js/runtime.js"></script>
+                <script type="text/javascript" src="/test1-angular/static/src/js/polyfills.js" ></script>
+                <script type="text/javascript" src="/test1-angular/static/src/js/main.js" ></script>
+            </t>
+         </template>
+
+                 <template id="index2" name="Custom template">
+            <t t-call="website.layout">
+                <h1>Hola 2</h1>
+            </t>
+         </template>
+    </data>
+</odoo>

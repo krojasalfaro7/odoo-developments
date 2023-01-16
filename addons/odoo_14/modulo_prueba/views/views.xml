@@ -1,0 +1,59 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="modulo_prueba.list">
+      <field name="name">Vista lista Modulo Prueba</field>
+      <field name="model">modulo.prueba</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+<!--          <field name="description"/>-->
+<!--          <field name="apellido"/>-->
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="modulo_prueba.form">
+      <field name="name">Vista formulario Modulo Prueba</field>
+      <field name="model">modulo.prueba</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+
+            <field name="name"/>
+            <field name="value"/>
+            <field name="description"/>
+            <field name="apellido"/>
+          </group>
+
+        </form>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="modulo_prueba.action_window">
+      <field name="name">modulo_prueba window</field>
+      <field name="res_model">modulo.prueba</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Top menu item -->
+
+    <menuitem name="Modulo de Prueba" id="modulo_prueba.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Menu 1" id="modulo_prueba.menu_1" parent="modulo_prueba.menu_root"/>
+
+    <!-- actions -->
+
+    <menuitem name="List" id="modulo_prueba.menu_1_list" parent="modulo_prueba.menu_1"
+              action="modulo_prueba.action_window"/>
+
+  </data>
+</odoo>

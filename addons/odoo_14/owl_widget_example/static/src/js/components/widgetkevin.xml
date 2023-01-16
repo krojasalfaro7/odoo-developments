@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+ <t t-name="owl_widget_example.WidgetKevin" owl="1">
+     <div>My cool new widget</div>
+ </t>
+</templates>
